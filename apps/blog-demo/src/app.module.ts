@@ -5,6 +5,7 @@ import { UserModule } from "./user/user.module";
 import { PostModule } from "./post/post.module";
 import { AuthorModule } from "./author/author.module";
 import { TagModule } from "./tag/tag.module";
+import { DaniModule } from "./dani/dani.module";
 import { HealthModule } from "./health/health.module";
 import { PrismaModule } from "./prisma/prisma.module";
 import { SecretsManagerModule } from "./providers/secrets/secretsManager.module";
@@ -25,6 +26,7 @@ import { AuthModule } from "./auth/auth.module";
     PostModule,
     AuthorModule,
     TagModule,
+    DaniModule,
     HealthModule,
     PrismaModule,
     SecretsManagerModule,
