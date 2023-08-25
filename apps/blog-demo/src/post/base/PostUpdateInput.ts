@@ -18,9 +18,11 @@ import {
   IsString,
   IsBoolean,
   IsDate,
+  IsInt,
 } from "class-validator";
 import { Type } from "class-transformer";
 import { TagUpdateManyWithoutPostsInput } from "./TagUpdateManyWithoutPostsInput";
+import { GraphQLBigInt } from "../../util/GraphQLBigInt";
 
 @InputType()
 class PostUpdateInput {
@@ -135,6 +137,17 @@ class PostUpdateInput {
     nullable: true,
   })
   title?: string;
+
+  @ApiProperty({
+    required: false,
+    type: Number,
+  })
+  @IsInt()
+  @IsOptional()
+  @Field(() => GraphQLBigInt, {
+    nullable: true,
+  })
+  views?: bigint | null;
 }
 
 export { PostUpdateInput as PostUpdateInput };

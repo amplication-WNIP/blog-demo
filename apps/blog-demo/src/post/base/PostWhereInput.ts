@@ -15,6 +15,7 @@ import { AuthorWhereUniqueInput } from "../../author/base/AuthorWhereUniqueInput
 import { ValidateNested, IsOptional } from "class-validator";
 import { Type } from "class-transformer";
 import { TagListRelationFilter } from "../../tag/base/TagListRelationFilter";
+import { BigIntNullableFilter } from "../../util/BigIntNullableFilter";
 
 @InputType()
 class PostWhereInput {
@@ -41,6 +42,17 @@ class PostWhereInput {
     nullable: true,
   })
   tags?: TagListRelationFilter;
+
+  @ApiProperty({
+    required: false,
+    type: BigIntNullableFilter,
+  })
+  @Type(() => BigIntNullableFilter)
+  @IsOptional()
+  @Field(() => BigIntNullableFilter, {
+    nullable: true,
+  })
+  views?: BigIntNullableFilter;
 }
 
 export { PostWhereInput as PostWhereInput };

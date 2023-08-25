@@ -33,6 +33,7 @@ model Post {
   tags            Tag[]
   title           String
   updatedAt       DateTime  @updatedAt
+  views           BigInt?
 }
 
 model Author {

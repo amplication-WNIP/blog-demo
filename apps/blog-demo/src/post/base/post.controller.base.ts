@@ -76,6 +76,7 @@ export class PostControllerBase {
         slug: true,
         title: true,
         updatedAt: true,
+        views: true,
       },
     });
   }
@@ -114,6 +115,7 @@ export class PostControllerBase {
         slug: true,
         title: true,
         updatedAt: true,
+        views: true,
       },
     });
   }
@@ -153,6 +155,7 @@ export class PostControllerBase {
         slug: true,
         title: true,
         updatedAt: true,
+        views: true,
       },
     });
     if (result === null) {
@@ -207,6 +210,7 @@ export class PostControllerBase {
           slug: true,
           title: true,
           updatedAt: true,
+          views: true,
         },
       });
     } catch (error) {
@@ -254,6 +258,7 @@ export class PostControllerBase {
           slug: true,
           title: true,
           updatedAt: true,
+          views: true,
         },
       });
     } catch (error) {

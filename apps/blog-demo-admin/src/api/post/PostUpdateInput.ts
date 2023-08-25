@@ -12,4 +12,5 @@ export type PostUpdateInput = {
   slug?: string | null;
   tags?: TagUpdateManyWithoutPostsInput;
   title?: string;
+  views?: bigint | null;
 };

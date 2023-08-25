@@ -247,6 +247,7 @@ export class AuthorControllerBase {
         slug: true,
         title: true,
         updatedAt: true,
+        views: true,
       },
     });
     if (results === null) {

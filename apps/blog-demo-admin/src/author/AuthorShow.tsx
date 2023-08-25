@@ -47,6 +47,7 @@ export const AuthorShow = (props: ShowProps): React.ReactElement => {
             <TextField label="Slug" source="slug" />
             <TextField label="Title" source="title" />
             <DateField source="updatedAt" label="Updated At" />
+            <TextField label="views" source="views" />
           </Datagrid>
         </ReferenceManyField>
       </SimpleShowLayout>

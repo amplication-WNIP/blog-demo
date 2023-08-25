@@ -30,6 +30,7 @@ export const PostShow = (props: ShowProps): React.ReactElement => {
         <TextField label="Slug" source="slug" />
         <TextField label="Title" source="title" />
         <DateField source="updatedAt" label="Updated At" />
+        <TextField label="views" source="views" />
       </SimpleShowLayout>
     </Show>
   );

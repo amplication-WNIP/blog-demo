@@ -227,6 +227,7 @@ export class TagControllerBase {
         slug: true,
         title: true,
         updatedAt: true,
+        views: true,
       },
     });
     if (results === null) {

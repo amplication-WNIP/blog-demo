@@ -15,4 +15,5 @@ export type Post = {
   tags?: Array<Tag>;
   title: string;
   updatedAt: Date;
+  views: bigint | null;
 };

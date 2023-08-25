@@ -12,4 +12,5 @@ export type PostCreateInput = {
   slug?: string | null;
   tags?: TagCreateNestedManyWithoutPostsInput;
   title: string;
+  views?: bigint | null;
 };

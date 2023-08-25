@@ -18,9 +18,11 @@ import {
   IsBoolean,
   IsOptional,
   IsDate,
+  IsInt,
 } from "class-validator";
 import { Type } from "class-transformer";
 import { TagCreateNestedManyWithoutPostsInput } from "./TagCreateNestedManyWithoutPostsInput";
+import { GraphQLBigInt } from "../../util/GraphQLBigInt";
 
 @InputType()
 class PostCreateInput {
@@ -123,6 +125,17 @@ class PostCreateInput {
   @IsString()
   @Field(() => String)
   title!: string;
+
+  @ApiProperty({
+    required: false,
+    type: Number,
+  })
+  @IsInt()
+  @IsOptional()
+  @Field(() => GraphQLBigInt, {
+    nullable: true,
+  })
+  views?: bigint | null;
 }
 
 export { PostCreateInput as PostCreateInput };

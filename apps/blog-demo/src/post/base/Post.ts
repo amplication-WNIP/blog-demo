@@ -18,9 +18,11 @@ import {
   IsDate,
   IsBoolean,
   IsOptional,
+  IsInt,
 } from "class-validator";
 import { Type } from "class-transformer";
 import { Tag } from "../../tag/base/Tag";
+import { GraphQLBigInt } from "../../util/GraphQLBigInt";
 
 @ObjectType()
 class Post {
@@ -143,6 +145,17 @@ class Post {
   @Type(() => Date)
   @Field(() => Date)
   updatedAt!: Date;
+
+  @ApiProperty({
+    required: false,
+    type: Number,
+  })
+  @IsInt()
+  @IsOptional()
+  @Field(() => GraphQLBigInt, {
+    nullable: true,
+  })
+  views!: bigint | null;
 }
 
 export { Post as Post };

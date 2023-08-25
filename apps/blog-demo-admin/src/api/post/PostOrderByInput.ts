@@ -13,4 +13,5 @@ export type PostOrderByInput = {
   slug?: SortOrder;
   title?: SortOrder;
   updatedAt?: SortOrder;
+  views?: SortOrder;
 };
