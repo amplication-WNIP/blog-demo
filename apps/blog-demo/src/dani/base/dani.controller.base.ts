@@ -53,6 +53,7 @@ export class DaniControllerBase {
       select: {
         createdAt: true,
         id: true,
+        oneMore: true,
         updatedAt: true,
         userId: true,
       },
@@ -78,6 +79,7 @@ export class DaniControllerBase {
       select: {
         createdAt: true,
         id: true,
+        oneMore: true,
         updatedAt: true,
         userId: true,
       },
@@ -104,6 +106,7 @@ export class DaniControllerBase {
       select: {
         createdAt: true,
         id: true,
+        oneMore: true,
         updatedAt: true,
         userId: true,
       },
@@ -139,6 +142,7 @@ export class DaniControllerBase {
         select: {
           createdAt: true,
           id: true,
+          oneMore: true,
           updatedAt: true,
           userId: true,
         },
@@ -173,6 +177,7 @@ export class DaniControllerBase {
         select: {
           createdAt: true,
           id: true,
+          oneMore: true,
           updatedAt: true,
           userId: true,
         },

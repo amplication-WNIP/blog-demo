@@ -14,6 +14,7 @@ export const DaniList = (props: ListProps): React.ReactElement => {
       <Datagrid rowClick="show">
         <DateField source="createdAt" label="Created At" />
         <TextField label="ID" source="id" />
+        <TextField label="one more" source="oneMore" />
         <DateField source="updatedAt" label="Updated At" />
         <TextField label="userId" source="userId" />
       </Datagrid>

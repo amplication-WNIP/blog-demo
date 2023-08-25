@@ -59,6 +59,7 @@ model Tag {
 model Dani {
   createdAt DateTime @default(now())
   id        String   @id @default(cuid())
+  oneMore   String?
   updatedAt DateTime @updatedAt
   userId    String?
 }

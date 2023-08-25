@@ -38,6 +38,17 @@ class DaniWhereInput {
   @Field(() => StringNullableFilter, {
     nullable: true,
   })
+  oneMore?: StringNullableFilter;
+
+  @ApiProperty({
+    required: false,
+    type: StringNullableFilter,
+  })
+  @Type(() => StringNullableFilter)
+  @IsOptional()
+  @Field(() => StringNullableFilter, {
+    nullable: true,
+  })
   userId?: StringNullableFilter;
 }
 

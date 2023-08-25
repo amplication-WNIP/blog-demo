@@ -24,6 +24,17 @@ class DaniUpdateInput {
   @Field(() => String, {
     nullable: true,
   })
+  oneMore?: string | null;
+
+  @ApiProperty({
+    required: false,
+    type: String,
+  })
+  @IsString()
+  @IsOptional()
+  @Field(() => String, {
+    nullable: true,
+  })
   userId?: string | null;
 }
 

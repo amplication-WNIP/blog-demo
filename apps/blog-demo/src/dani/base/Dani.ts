@@ -33,6 +33,17 @@ class Dani {
   id!: string;
 
   @ApiProperty({
+    required: false,
+    type: String,
+  })
+  @IsString()
+  @IsOptional()
+  @Field(() => String, {
+    nullable: true,
+  })
+  oneMore!: string | null;
+
+  @ApiProperty({
     required: true,
   })
   @IsDate()
