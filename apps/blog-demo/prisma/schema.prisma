@@ -41,6 +41,7 @@ model Author {
   id           String   @id @default(cuid())
   lastName     String?
   posts        Post[]
+  price        Decimal?
   profileImage String?
   slug         String?  @unique
   twitter      String?

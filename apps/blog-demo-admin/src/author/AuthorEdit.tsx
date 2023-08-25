@@ -7,6 +7,7 @@ import {
   TextInput,
   ReferenceArrayInput,
   SelectArrayInput,
+  NumberInput,
 } from "react-admin";
 
 import { PostTitle } from "../post/PostTitle";
@@ -25,6 +26,7 @@ export const AuthorEdit = (props: EditProps): React.ReactElement => {
         >
           <SelectArrayInput optionText={PostTitle} />
         </ReferenceArrayInput>
+        <NumberInput label="price" source="price" />
         <TextInput label="Profile Image" source="profileImage" />
         <TextInput label="Slug" source="slug" />
         <TextInput label="Twitter" source="twitter" />

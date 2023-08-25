@@ -22,6 +22,7 @@ export const AuthorShow = (props: ShowProps): React.ReactElement => {
         <TextField label="First Name" source="firstName" />
         <TextField label="Id" source="id" />
         <TextField label="Last Name" source="lastName" />
+        <TextField label="price" source="price" />
         <TextField label="Profile Image" source="profileImage" />
         <TextField label="Slug" source="slug" />
         <TextField label="Twitter" source="twitter" />
