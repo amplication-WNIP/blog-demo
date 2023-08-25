@@ -33,6 +33,7 @@ model Post {
   tags            Tag[]
   title           String
   updatedAt       DateTime  @updatedAt
+  views           BigInt?
 }
 
 model Author {
@@ -41,6 +42,7 @@ model Author {
   id           String   @id @default(cuid())
   lastName     String?
   posts        Post[]
+  price        Decimal?
   profileImage String?
   slug         String?  @unique
   twitter      String?
@@ -54,4 +56,12 @@ model Tag {
   posts     Post[]
   slug      String?  @unique
   updatedAt DateTime @updatedAt
+}
+
+model Dani {
+  createdAt DateTime @default(now())
+  id        String   @id @default(cuid())
+  oneMore   String?
+  updatedAt DateTime @updatedAt
+  userId    String?
 }

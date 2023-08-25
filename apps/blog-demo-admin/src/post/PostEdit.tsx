@@ -11,6 +11,7 @@ import {
   DateTimeInput,
   ReferenceArrayInput,
   SelectArrayInput,
+  NumberInput,
 } from "react-admin";
 
 import { AuthorTitle } from "../author/AuthorTitle";
@@ -39,6 +40,7 @@ export const PostEdit = (props: EditProps): React.ReactElement => {
           <SelectArrayInput optionText={TagTitle} />
         </ReferenceArrayInput>
         <TextInput label="Title" source="title" />
+        <NumberInput step={1} label="views" source="views" />
       </SimpleForm>
     </Edit>
   );

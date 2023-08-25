@@ -30,6 +30,7 @@ const CREATE_INPUT = {
   slug: "exampleSlug",
   title: "exampleTitle",
   updatedAt: new Date(),
+  views: 42242424,
 };
 const CREATE_RESULT = {
   content: "exampleContent",
@@ -43,6 +44,7 @@ const CREATE_RESULT = {
   slug: "exampleSlug",
   title: "exampleTitle",
   updatedAt: new Date(),
+  views: 42242424,
 };
 const FIND_MANY_RESULT = [
   {
@@ -57,6 +59,7 @@ const FIND_MANY_RESULT = [
     slug: "exampleSlug",
     title: "exampleTitle",
     updatedAt: new Date(),
+    views: 42242424,
   },
 ];
 const FIND_ONE_RESULT = {
@@ -71,6 +74,7 @@ const FIND_ONE_RESULT = {
   slug: "exampleSlug",
   title: "exampleTitle",
   updatedAt: new Date(),
+  views: 42242424,
 };
 
 const service = {

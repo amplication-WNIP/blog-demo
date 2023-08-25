@@ -2,18 +2,12 @@ import { ValidationPipe } from "@nestjs/common";
 import { HttpAdapterHost, NestFactory } from "@nestjs/core";
 import { OpenAPIObject, SwaggerModule } from "@nestjs/swagger";
 import { HttpExceptionFilter } from "./filters/HttpExceptions.filter";
-// @ts-ignore
-// eslint-disable-next-line
 import { AppModule } from "./app.module";
-// @ts-ignore
-// eslint-disable-next-line
 import { connectMicroservices } from "./connectMicroservices";
 import {
   swaggerPath,
   swaggerDocumentOptions,
   swaggerSetupOptions,
-  // @ts-ignore
-  // eslint-disable-next-line
 } from "./swagger";
 
 const { PORT = 3000 } = process.env;
@@ -28,6 +22,13 @@ async function main() {
       forbidUnknownValues: false,
     })
   );
+
+  //This fix is based on https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/BigInt#use_within_json
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore
+  BigInt.prototype.toJSON = function () {
+    return this.toString();
+  };
 
   const document = SwaggerModule.createDocument(app, swaggerDocumentOptions);
 

@@ -14,6 +14,7 @@ import { ApiProperty } from "@nestjs/swagger";
 import { PostListRelationFilter } from "../../post/base/PostListRelationFilter";
 import { ValidateNested, IsOptional } from "class-validator";
 import { Type } from "class-transformer";
+import { DecimalNullableFilter } from "../../util/DecimalNullableFilter";
 
 @InputType()
 class AuthorWhereInput {
@@ -28,6 +29,17 @@ class AuthorWhereInput {
     nullable: true,
   })
   posts?: PostListRelationFilter;
+
+  @ApiProperty({
+    required: false,
+    type: DecimalNullableFilter,
+  })
+  @Type(() => DecimalNullableFilter)
+  @IsOptional()
+  @Field(() => DecimalNullableFilter, {
+    nullable: true,
+  })
+  price?: DecimalNullableFilter;
 }
 
 export { AuthorWhereInput as AuthorWhereInput };

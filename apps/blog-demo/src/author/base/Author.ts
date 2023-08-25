@@ -9,11 +9,18 @@ https://docs.amplication.com/how-to/custom-code
 
 ------------------------------------------------------------------------------
   */
-import { ObjectType, Field } from "@nestjs/graphql";
+import { ObjectType, Field, Float } from "@nestjs/graphql";
 import { ApiProperty } from "@nestjs/swagger";
-import { IsDate, IsString, IsOptional, ValidateNested } from "class-validator";
+import {
+  IsDate,
+  IsString,
+  IsOptional,
+  ValidateNested,
+  IsNumber,
+} from "class-validator";
 import { Type } from "class-transformer";
 import { Post } from "../../post/base/Post";
+import { Decimal } from "decimal.js";
 
 @ObjectType()
 class Author {
@@ -60,6 +67,17 @@ class Author {
   @Type(() => Post)
   @IsOptional()
   posts?: Array<Post>;
+
+  @ApiProperty({
+    required: false,
+    type: Number,
+  })
+  @IsNumber()
+  @IsOptional()
+  @Field(() => Float, {
+    nullable: true,
+  })
+  price!: Decimal | null;
 
   @ApiProperty({
     required: false,

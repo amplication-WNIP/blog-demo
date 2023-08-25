@@ -21,6 +21,10 @@ import { TagList } from "./tag/TagList";
 import { TagCreate } from "./tag/TagCreate";
 import { TagEdit } from "./tag/TagEdit";
 import { TagShow } from "./tag/TagShow";
+import { DaniList } from "./dani/DaniList";
+import { DaniCreate } from "./dani/DaniCreate";
+import { DaniEdit } from "./dani/DaniEdit";
+import { DaniShow } from "./dani/DaniShow";
 import { jwtAuthProvider } from "./auth-provider/ra-auth-jwt";
 
 const App = (): React.ReactElement => {
@@ -74,6 +78,13 @@ const App = (): React.ReactElement => {
           edit={TagEdit}
           create={TagCreate}
           show={TagShow}
+        />
+        <Resource
+          name="Dani"
+          list={DaniList}
+          edit={DaniEdit}
+          create={DaniCreate}
+          show={DaniShow}
         />
       </Admin>
     </div>
